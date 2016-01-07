@@ -1,0 +1,28 @@
+{
+  "name": "react_test",
+  "homepage": "https://github.com/ugarcia/react_test",
+  "authors": [
+    "unai <unai.gg77@gmail.com>"
+  ],
+  "description": "testing reactjs",
+  "main": "app/main.js",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "react"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "react": "~0.14.6",
+    "backbone": "~1.2.3"
+  }
+}
