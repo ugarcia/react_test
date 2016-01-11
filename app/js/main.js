@@ -1,13 +1,7 @@
-import * as underscore from '../components/underscore/underscore';
-//
-
-window.underscore = underscore;
-
-import * as zbb from '../components/backbone/backbone';
-
-//require('underscore');
-
-//import r from '../components/react/react-with-addons.min';
+import * as underscore from 'underscore';
+//import 'jquery';
+import * as bb from 'backbone';
+//import * as r from 'react';
 
 console.log(window);
 
