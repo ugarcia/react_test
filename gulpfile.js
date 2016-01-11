@@ -1,14 +1,15 @@
-var gulp = require("gulp");
-var babel = require("gulp-babel");
-var del = require("del");
-var concat = require("gulp-concat");
+var config = require('./package.json'),
+    tasks = require('require-dir')('./gulp');
 
-gulp.task("build", function () {
-    del.sync(['./build/*']);
-    return gulp.src(["app/**/*.js", "!app/components/**/*.js"])
-        .pipe(babel())
-        .pipe(concat("app.js"))
-        .pipe(gulp.dest("build"));
+Object.keys(config.devDependencies).forEach(function(libName) {
+    var name = libName
+        .replace(/^gulp-/g, '')
+        .replace(/-(.{1})/g, function(s, c) {return c.toUpperCase()});
+    this[name] = require(libName);
 });
 
-gulp.task("default", ["build"]);
+Object.keys(tasks).forEach(function(taskName) {
+    gulp.task(taskName, tasks[taskName]);
+});
+
+gulp.task('default', ['css', 'compile']);

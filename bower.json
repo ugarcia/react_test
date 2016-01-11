@@ -19,10 +19,12 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    "build"
   ],
   "dependencies": {
     "react": "~0.14.6",
-    "backbone": "~1.2.3"
+    "backbone": "~1.2.3",
+    "bootstrap": "~3.3.6"
   }
 }
