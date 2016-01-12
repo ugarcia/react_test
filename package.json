@@ -8,6 +8,8 @@
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
     "babelify": "^7.2.0",
+    "backbone": "^1.2.3",
+    "bootstrap": "^3.3.6",
     "browserify": "^13.0.0",
     "browserify-shim": "^3.8.11",
     "del": "^2.2.0",
@@ -17,6 +19,8 @@
     "gulp-minify-css": "^1.2.3",
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^1.5.1",
+    "jquery": "^2.2.0",
+    "react": "^0.14.6",
     "require-dir": "^0.3.0",
     "vinyl-paths": "^2.1.0",
     "vinyl-source-stream": "^1.1.0"
@@ -39,17 +43,16 @@
   },
   "homepage": "https://github.com/ugarcia/react_test#readme",
   "browser": {
-    "jquery": "./app/components/jquery/dist/jquery.min.js",
-    "bootstrap": "./app/components/bootstrap/dist/js/bootstrap.min.js",
-    "underscore": "./app/components/underscore/underscore.js",
-    "backbone": "./app/components/backbone/backbone.js",
-    "react": "./app/components/react/react-with-addons.min.js"
+    "jquery": "./node_modules/jquery/dist/jquery.min.js",
+    "bootstrap": "./node_modules/bootstrap/dist/js/bootstrap.min.js",
+    "underscore": "./node_modules/backbone/node_modules/underscore/underscore.js",
+    "backbone": "./node_modules/backbone/backbone.js",
+    "react": "./node_modules/react/dist/react-with-addons.min.js"
   },
   "browserify-shim": {
     "jquery": "$",
     "underscore": "_",
     "bootstrap": {
-      "exports": "bs",
       "depends": [
         "jquery:jQuery"
       ]
@@ -61,7 +64,7 @@
         "jquery:$"
       ]
     },
-    "react": "React"
+    "react": {}
   },
   "browserify": {
     "transform": [

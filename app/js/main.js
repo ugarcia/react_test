@@ -1,9 +1,11 @@
-import * as underscore from 'underscore';
+//import * as underscore from 'underscore';
 //import 'jquery';
 import * as bb from 'backbone';
 //import * as r from 'react';
 
-console.log(window);
+//require('backbone');
+
+console.log(bb);
 
 //var MainContent = r.React.createClass({
 //   render: () => {
