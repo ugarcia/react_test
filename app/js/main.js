@@ -1,23 +1,9 @@
-//import * as underscore from 'underscore';
-//import 'jquery';
-import * as bb from 'backbone';
-//import * as r from 'react';
+import 'backbone';
+import 'react';
+import 'react-dom';
+import MainContent from './components/main_content'
 
-//require('backbone');
-
-console.log(bb);
-
-//var MainContent = r.React.createClass({
-//   render: () => {
-//       (
-//           <section>
-//               Here's the main section!!
-//           </section>
-//       )
-//   }
-//});
-
-//r.ReactDOM.render(
-//    <MainContent />,
-//    document.querySelector('.main-content')
-//);
+ReactDOM.render(
+    <MainContent />,
+    document.querySelector('.main-container')
+);

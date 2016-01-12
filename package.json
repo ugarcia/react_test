@@ -3,13 +3,17 @@
   "version": "1.0.0",
   "description": "Testing ReactJS Capabilities",
   "main": "app/app.js",
-  "dependencies": {},
+  "dependencies": {
+    "backbone": "^1.2.3",
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.0",
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6"
+  },
   "devDependencies": {
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
     "babelify": "^7.2.0",
-    "backbone": "^1.2.3",
-    "bootstrap": "^3.3.6",
     "browserify": "^13.0.0",
     "browserify-shim": "^3.8.11",
     "del": "^2.2.0",
@@ -19,15 +23,11 @@
     "gulp-minify-css": "^1.2.3",
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^1.5.1",
-    "jquery": "^2.2.0",
-    "react": "^0.14.6",
     "require-dir": "^0.3.0",
     "vinyl-paths": "^2.1.0",
     "vinyl-source-stream": "^1.1.0"
   },
-  "scripts": {
-    "test": "gulp test"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ugarcia/react_test.git"
@@ -45,9 +45,10 @@
   "browser": {
     "jquery": "./node_modules/jquery/dist/jquery.min.js",
     "bootstrap": "./node_modules/bootstrap/dist/js/bootstrap.min.js",
-    "underscore": "./node_modules/backbone/node_modules/underscore/underscore.js",
-    "backbone": "./node_modules/backbone/backbone.js",
-    "react": "./node_modules/react/dist/react-with-addons.min.js"
+    "underscore": "./node_modules/backbone/node_modules/underscore/underscore-min.js",
+    "backbone": "./node_modules/backbone/backbone-min.js",
+    "react": "./node_modules/react/dist/react-with-addons.js",
+    "react-dom": "./node_modules/react-dom/dist/react-dom.js"
   },
   "browserify-shim": {
     "jquery": "$",
@@ -64,7 +65,13 @@
         "jquery:$"
       ]
     },
-    "react": {}
+    "react": "React",
+    "react-dom": {
+      "exports": "ReactDOM",
+      "depends": [
+        "react:React"
+      ]
+    }
   },
   "browserify": {
     "transform": [
@@ -80,7 +87,6 @@
     "plugins": [],
     "ignore": [
       "node_modules",
-      "app/components",
       "app/app.js",
       "build",
       "gulp",
