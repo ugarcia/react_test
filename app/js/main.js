@@ -1,9 +1,11 @@
+import 'bootstrap';
 import 'backbone';
 import 'react';
 import 'react-dom';
-import MainContent from './components/main_content'
+import MainContainer from './components/main_container'
 
 ReactDOM.render(
-    <MainContent />,
-    document.querySelector('.main-container')
+    <MainContainer />,
+    document.querySelector('.main-wrapper')
 );
+
